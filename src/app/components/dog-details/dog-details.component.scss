@@ -1,0 +1,323 @@
+
+.main-div {
+  background-color: #f8f9fa;
+  color: #272b41;
+  font-family: Poppins,sans-serif;
+  font-size: .9375rem;
+  overflow-x: hidden;
+}
+.blog {
+  border: 1px solid #f0f0f0;
+  background-color: #fff;
+  border-radius: 4px;
+  margin-bottom: 30px;
+  padding: 1.5rem;
+  position: relative;
+}
+.blog-image {
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+.blog-image, .blog-image>a, .blog-image img {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+.blog-image, .blog-image>a, .blog-image img {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: auto;
+  color: #2e3842;
+}
+.content {
+  min-height: 200px;
+  padding: 30px 0 0;
+}
+.blog-image img {
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  transform: translateZ(0);
+  -moz-transition: all 2000ms cubic-bezier(.19,1,.22,1) 0ms;
+  -ms-transition: all 2000ms cubic-bezier(.19,1,.22,1) 0ms;
+  -o-transition: all 2000ms cubic-bezier(.19,1,.22,1) 0ms;
+  -webkit-transition: all 2000ms cubic-bezier(.19,1,.22,1) 0ms;
+  transition: all 2000ms cubic-bezier(.19,1,.22,1) 0ms;
+  transition: all 2s cubic-bezier(.19,1,.22,1) 0ms;
+}
+.blog-image img {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+.blog-image a:hover img {
+  -webkit-transform: scale(1.15);
+  -moz-transform: scale(1.15);
+  transform: scale(1.15);
+}
+.blog-title {
+  font-size: 22px;
+  margin: 0 0 10px;
+}
+.blog-title a {
+  color: #272b41;
+}
+.blog-info, .blog-info a, .blog-info a:hover {
+  color: #757575;
+}
+.blog-info {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+.clearfix:after {
+  display: block;
+  clear: both;
+  content: "";
+}
+.post-left ul {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.post-left ul li {
+  margin-bottom: 5px;
+  margin-right: 20px;
+}
+.post-author a {
+  display: flex;
+  align-items: center;
+}
+.post-author img {
+  border-radius: 100%;
+  width: 28px;
+  margin-right: 5px;
+}
+.blog-info i {
+  color: #20c0f3;
+  font-size: 14px;
+  margin-right: 5px;
+}
+.blog-content {
+  position: relative;
+}
+.blog-content p {
+  color: #666;
+  font-size: 14px;
+  margin: 0 0 30px;
+}
+
+.blog-title-a:hover {
+  color: #20c0f3 !important;
+  text-decoration: none;
+}
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: .25rem;
+  border: 1px solid #f0f0f0;
+  margin-bottom: 1.875rem !important;
+}
+.input-group {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  width: 100%;
+}
+.input-group-append {
+  margin-left: -1px;
+  display: flex;
+}
+.card .card-header {
+  background-color: #fff;
+  border-bottom: 1px solid #f0f0f0;
+}
+.card-header:first-child {
+  border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0;
+}
+.card-body {
+  padding: 1.5rem;
+}
+.latest-posts {
+  margin: 0;
+  padding: 0;
+}
+.latest-posts li {
+  display: table;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.post-thumb {
+  border-radius: 4px;
+  width: 80px;
+  float: left;
+  overflow: hidden;
+}
+.post-info {
+  margin-left: 95px;
+}
+.post-thumb a img {
+  border-radius: 4px;
+  transform: translateZ(0);
+  transition: all 2s cubic-bezier(.19,1,.22,1) 0ms;
+}
+.post-info h4 {
+  font-size: 15px;
+  margin: 0 0 5px;
+}
+.post-info h4 a {
+  color: #272b41;
+}
+.post-info p {
+  color: #757575;
+  font-size: 12px;
+  margin: 0;
+}
+.category-widget .categories {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.category-widget .categories li {
+  margin-bottom: 20px;
+}
+.category-widget .categories li a {
+  color: #2e3842;
+  font-size: 15px;
+  cursor: pointer;
+  font-weight: 500;
+}
+.category-widget .categories li a span {
+  float: right;
+  color: #757575;
+}
+.social-share {
+  float: left;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.social-share>li:first-child {
+  margin-left: 0;
+}
+.social-share>li {
+  display: inline-block;
+  float: left;
+  margin-left: 10px;
+  text-align: center;
+}
+.social-share>li>a {
+  border: 1px solid #dfdfdf;
+  color: #666;
+  display: inline-block;
+  font-size: 22px;
+  height: 40px;
+  line-height: 40px;
+  width: 40px;
+  color: inherit;
+  text-decoration: none;
+}
+.about-author {
+  min-height: 100px;
+}
+.about-author-img {
+  background-color: #fff;
+  height: 100px;
+  overflow: hidden;
+  position: absolute;
+  width: 100px;
+}
+.author-details {
+  margin-left: 120px;
+}
+.rounded-circle {
+  border-radius: 50%!important;
+}
+.author-details .blog-author-name {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+.blog-author-name {
+  color: #272b41;
+  font-size: 16px;
+  font-weight: 600;
+}
+.blog-date {
+  color: #999;
+  font-size: 14px;
+}
+ .submit-btn {
+  padding: 12px 30px;
+  font-weight: 600;
+  font-size: 16px;
+  min-width: 120px;
+  background-color: #09e5ab;
+    border: 1px solid #09e5ab;
+}
+.capt {
+  font-family: sans-serif;
+    font-size: 18px;
+    color: cadetblue;
+    margin-top: 15px;
+    font: status-bar;
+    text-transform: capitalize;
+}
+.yess {
+  background-color: rgb(9, 229, 171);
+    border: 1px solid rgb(9, 229, 171);
+    color: rgb(255, 255, 255);
+}
+.nooo {
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+}
+.yess:hover {
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+}
+.noo:hover {
+  background-color: rgb(9, 229, 171);
+  border: 1px solid rgb(9, 229, 171);
+  color: rgb(255, 255, 255);
+}
+.dropdown {
+  position: relative;
+}
+.dropdown-content {
+  position: absolute;
+  height: 50px;
+  width: 150px;
+  justify-content: center;
+  display: flex;
+  top: 20px;
+  z-index: 99
+}
+.dropdown-content a:hover {
+  background-color: #d9534f;
+  color: white
+}
+.btn-size {
+  background: transparent;
+    border: none;
+}
+.custom-size {
+  width: 100%;
+  height: 100%;
+}
+// .custom-row {
+//   display: block !important;
+// }

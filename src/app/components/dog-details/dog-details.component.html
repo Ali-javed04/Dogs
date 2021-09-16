@@ -1,0 +1,218 @@
+<div class="container-fluid main-div">
+  <div class="container mt-4 mb-4">
+    <div class="row">
+      <div class="col-lg-8 col-md-12">
+        <div class="blog">
+          <div class="blog-image">
+            <a href="">
+              <img src="{{selectedDogDetails.url}}"
+                class="img-fluid" alt="">
+            </a>
+          </div>
+
+
+          <div class="blog-content">
+            <div class="pull-right col-lg-5 col-md-6 col-sm-12 mb-4 mt-2">
+              <button *ngIf="!alreadyapply" class="btn btn-warning custom-size" data-toggle="modal" data-target="#exampleModal" (click)="getProfileData()">
+                Adopt
+              </button>
+              <button class="btn btn-warning custom-size" *ngIf="alreadyapply">
+                Applied
+              </button>
+            </div>
+
+            <div class="table-responsive">
+            <table class="table table-hover">
+              <thead>
+
+              </thead>
+              <tbody>
+                <tr>
+
+                  <th>Name</th>
+                  <td class="blog-title">{{selectedDogDetails.breeds[0].name}}</td>
+                </tr>
+                <tr>
+
+                  <th>Breed Group</th>
+                  <td>{{selectedDogDetails.breeds[0].breed_group}}</td>
+                </tr>
+                <tr>
+
+                  <th>Breed For</th>
+                  <td>{{selectedDogDetails.breeds[0].bred_for}}</td>
+                </tr>
+
+                <tr>
+
+                  <th>Life Span</th>
+                  <td>{{selectedDogDetails.breeds[0].life_span}}</td>
+
+                </tr>
+                <tr>
+
+                  <th>Height</th>
+                  <td>imperial: ({{selectedDogDetails.breeds[0].height.imperial}}),
+                     metric: ({{selectedDogDetails.breeds[0].height.metric}}),
+
+                  </td>
+
+                </tr>
+                <tr>
+
+                  <th>Weight</th>
+                  <td>imperial: ({{selectedDogDetails.breeds[0].weight.imperial}}),
+                    metric: ({{selectedDogDetails.breeds[0].weight.metric}}),
+                  </td>
+                </tr>
+                <tr>
+                  <th>Origin</th>
+                  <td>{{selectedDogDetails.breeds[0].origin}}</td>
+                </tr>
+                <tr>
+
+                  <th>Temperament</th>
+                  <td>{{selectedDogDetails.breeds[0].temperament}}</td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- col-4  -->
+      <div class="col-lg-4 col-md-12">
+        <div class="card search-widget">
+          <div class="card-body">
+            <form class="search-form">
+              <div class="input-group">
+                <input type="text" placeholder="Search..." class="form-control">
+                <div class="input-group-append">
+                  <button type="submit" class="btn btn-primary">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+
+                  </button>
+                </div>
+
+              </div>
+
+            </form>
+          </div>
+
+        </div>
+        <div class="card post-widget">
+          <div class="card-header">
+            <h4 class="card-title">Selected Breed For</h4>
+          </div>
+          <div class="card-body">
+            <ul class="latest-posts">
+              <li *ngFor="let item of selectedBreedFor">
+                <div class="post-thumb">
+                  <a href="">
+                    <img src="{{item.url}}" class="img-fluid" alt="">
+                  </a>
+                </div>
+                <div class="post-info">
+                  <h4>
+                    <a [routerLink]="['/dogdetails',item.id]" routerLinkActive="router-link-active" >{{item.breeds[0].temperament}}</a>
+                  </h4>
+                  <p>{{item.breeds[0].breed_group}}</p>
+
+                </div>
+              </li>
+
+
+            </ul>
+
+          </div>
+
+        </div>
+
+
+
+      </div>
+    </div>
+  </div>
+
+
+</div>
+<ngx-ui-loader></ngx-ui-loader>
+
+
+<!-- Modal -->
+<div class="modal fade bd-example-modal-lg" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+          <div class="form-row custom-row">
+              <div class="form-group col ">
+                  <label>Full Name</label>
+                  <input type="text" formControlName="name" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.name.errors }" />
+                  <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                      <div *ngIf="f.name.errors.required"> Name is required</div>
+                  </div>
+              </div>
+
+          </div>
+          <div class="form-row custom-row">
+
+          <div class="form-group col ">
+            <label>Postal Code</label>
+            <input type="text" formControlName="postalCode" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.postalCode.errors }" />
+            <div *ngIf="submitted && f.postalCode.errors" class="invalid-feedback">
+                <div *ngIf="f.postalCode.errors.required">postalCode is required</div>
+            </div>
+        </div>
+        <div class="form-group col ">
+          <label>City</label>
+          <input type="text" formControlName="city" name = "city" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.city.errors }" />
+          <div *ngIf="submitted && f.city.errors" class="invalid-feedback">
+              <div *ngIf="f.city.errors.required">City is required</div>
+          </div>
+      </div>
+
+
+          </div>
+          <div class="form-row custom-row">
+            <div class="form-group col ">
+              <label> Full Address</label>
+              <input type="text" formControlName="address" name = "text" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.address.errors }" />
+              <div *ngIf="submitted && f.address.errors" class="invalid-feedback">
+                  <div *ngIf="f.address.errors.required">Address is required</div>
+              </div>
+          </div>
+          <div class="form-group col ">
+            <label>Phone Number</label>
+            <input type="text" formControlName="phoneNumber" name = "text" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.phoneNumber.errors }" />
+            <div *ngIf="submitted && f.phoneNumber.errors" class="invalid-feedback">
+                <div *ngIf="f.phoneNumber.errors.required">Phone Number is required</div>
+            </div>
+        </div>
+
+          </div>
+
+
+
+
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary" >Send Information</button>
+        <button id="closeModalButton" [hidden]="true" data-toggle="modal"
+        data-target="#myModal" class="btn btn-default"
+       data-dismiss="modal">Close</button>
+      </div>
+    </form>
+  </div>
+    </div>
+  </div>
+</div>

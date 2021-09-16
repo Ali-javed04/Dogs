@@ -1,0 +1,115 @@
+.section-doctor {
+  background-color: #f8f9fa;
+  padding: 80px 0;
+}
+.section-doctor .section-header {
+  margin-bottom: 30px;
+}
+.grid-blog .blog-image {
+  margin-bottom: 20px;
+}
+
+.blog {
+  border: 1px solid #f0f0f0;
+  background-color: #fff;
+  border-radius: 4px;
+  margin-bottom: 30px;
+  padding: 1.5rem;
+  position: relative;
+}
+.grid-blog .blog-image {
+  margin-bottom: 20px;
+}
+.blog-content {
+  position: relative;
+}
+.blog-image, .blog-image > a, .blog-image img {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 300px;
+}
+.blog-image img {
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  transform: translateZ(0);
+  -moz-transition: all 2000ms cubic-bezier(.19,1,.22,1) 0ms;
+  -ms-transition: all 2000ms cubic-bezier(.19,1,.22,1) 0ms;
+  -o-transition: all 2000ms cubic-bezier(.19,1,.22,1) 0ms;
+  -webkit-transition: all 2000ms cubic-bezier(.19,1,.22,1) 0ms;
+  transition: all 2000ms cubic-bezier(.19,1,.22,1) 0ms;
+}
+.grid-blog .entry-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 0;
+}
+.entry-meta {
+  color: #757575;
+  font-size: 14px;
+  list-style: none;
+  margin-bottom: 15px;
+  padding: 0;
+}
+.grid-blog .blog-title {
+  font-size: 18px;
+  margin: 0 0 5px;
+  min-height: 43px;
+}
+.grid-blog .entry-meta li {
+  margin-bottom: 10px;
+}
+.entry-meta li {
+  display: inline-block;
+  margin-right: 15px;
+}
+.grid-blog .post-author {
+  width: 189px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.post-author a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.post-author img {
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  flex: 0 0 28px;
+  margin-right: 5px;
+}
+.post-author a > span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-decoration: none;
+}
+.blog-title a {
+  color: #272b41;
+  text-decoration: none;
+}
+.grid-blog .blog-content p {
+  margin: 0 0 15px;
+}
+.blog-image a:hover img {
+  -webkit-transform: scale(1.15);
+  -moz-transform: scale(1.15);
+  transform: scale(1.15);
+}
+.blog-image {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn-primarys {
+  background-color: #09e5ab;
+  border: 1px solid #09e5ab;
+  color: white;
+  text-decoration: none;
+}

@@ -1,0 +1,63 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+      <div class="container">
+        <div class="row">
+          <div class="col-10">
+            <img src="/assets/doglogomodified.png" alt=""><span class="logo-h">Dog</span>
+
+          </div>
+          <div class="col-2">
+            <button class="navbar-btn d-sm-block d-lg-none d-md-none" type="button" data-toggle="collapse" data-target="#nvbCollapse" aria-controls="nvbCollapse">
+              <i class="fa fa-bars" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+
+
+
+    </div>
+    <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+      <div class="container">
+
+           <div class="collapse navbar-collapse d-lg-block d-md-block" id="nvbCollapse">
+        <ul class="navbar">
+
+          <li class="navbar-item p-4"  [ngClass]="{'active': currentState('home')}"  [routerLink]="['/']" routerLinkActive="router-link-active">
+            <a class="navbar-a" >Home</a></li>
+          <li class="navbar-item p-4" [ngClass]="{'active': currentState('searchdog')}" [routerLink]="['/searchdog']" routerLinkActive="router-link-active">
+            <a class="navbar-a"  >Dog List</a></li>
+          <li class="navbar-item p-4" [ngClass]="{'active': currentState('contact')}"  [routerLink]="['/contact']" routerLinkActive="router-link-active">
+            <a class="navbar-a" >Contact Us</a></li>
+          <li class="navbar-item p-4" [ngClass]="{'active': currentState('about')}" [routerLink]="['/about']" routerLinkActive="router-link-active">
+            <a class="navbar-a"  >About Us</a></li>
+          <li *ngIf="!hasValidAuthenticationToken" class="navbar-item p-4" [ngClass]="{'active': currentState('login')}" [routerLink]="['/login']" routerLinkActive="router-link-active">
+            <a class="navbar-a"  >Login</a></li>
+            <li *ngIf="!hasValidAuthenticationToken" class="navbar-item p-4" [ngClass]="{'active': currentState('register')}" [routerLink]="['/register']" routerLinkActive="router-link-active">
+              <a class="navbar-a"  >Register</a></li>
+              <li *ngIf="hasAdmin" class="navbar-item p-4" [ngClass]="{'active': currentState('admin')}" [routerLink]="['/admin']" routerLinkActive="router-link-active">
+                <a class="navbar-a"  >Admin Panel</a></li>
+
+
+              <div *ngIf="hasValidAuthenticationToken" class="dropdown mmargin-left">
+                <button class="dropbtn" [ngClass]="{'active': currentState('profile')}">{{userName}}
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="up-icon">
+                  <i class="fa fa-caret-up iconi"></i>
+                </div>
+                <div class="dropdown-content">
+
+                  <a id="my-account" class="small-menu-item" [routerLink]="['/profile']"  title="My Account">My Account</a>
+                  <a (click)="logOut()" class="small-menu-item" title="Logout" id="btn-logout">Logout</a>
+                </div>
+              </div>
+
+        </ul>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>

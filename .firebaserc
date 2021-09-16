@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "appointment-app-e3f38": {
+      "hosting": {
+        "Dogs": [
+          "appointment-app-e3f38"
+        ]
+      }
+    }
+  }
+}
